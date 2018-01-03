@@ -45,7 +45,13 @@ public class MainFragment extends android.app.Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         initWidgit(view);
-        callApi();
+        if (Utility.isNetworkAvailable(getActivity())) {
+            callApi();
+        }
+        else
+        {
+            Toast.makeText(getActivity(), ""+getResources().getString(R.string.nointernet), Toast.LENGTH_SHORT).show();
+        }
     }
 
     private void callApi() {

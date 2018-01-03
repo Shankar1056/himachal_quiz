@@ -9,7 +9,11 @@
     <dimen name="text_10">10sp</dimen>
     <dimen name="text_5">5sp</dimen>
     <dimen name="text_14">14sp</dimen>
+    <dimen name="text_12">12sp</dimen>
     <dimen name="text_18">18sp</dimen>
+
+    <dimen name="dimen_20">20dp</dimen>
+    <dimen name="dimen_10">10dp</dimen>
 
 
     <dimen name="toolbartextsize">16sp</dimen>

@@ -23,7 +23,7 @@
             android:layout_weight="0.01"
             android:text="@string/previous"
             android:textColor="@color/colorPrimary"
-            android:textSize="20dp"
+            android:textSize="16sp"
             android:gravity="center"
             android:paddingLeft="7dp"/>
 
@@ -32,7 +32,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:id="@+id/quesCount"
-            android:textSize="20dp"
+            android:textSize="16sp"
             android:textColor="@color/colorBlack"
             android:gravity="center"/>
         <Button
@@ -42,7 +42,7 @@
             android:layout_weight="0.01"
             android:text="@string/next"
             android:textColor="@color/colorPrimary"
-            android:textSize="20dp"
+            android:textSize="16sp"
             android:gravity="center"
             android:paddingRight="7dp"
             />

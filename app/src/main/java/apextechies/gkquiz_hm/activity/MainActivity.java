@@ -4,7 +4,9 @@ import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -12,6 +14,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.widget.Toast;
 
 import org.json.JSONArray;
@@ -32,7 +35,7 @@ import apextechies.gkquiz_hm.utilz.WebServices;
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
-public class MainActivity extends AppCompatActivity/* implements SearchView.OnQueryTextListener*/{
+public class MainActivity extends AppCompatActivity/* implements SearchView.OnQueryTextListener*/ implements NavigationView.OnNavigationItemSelectedListener{
     private RecyclerView rv_category;
     private ArrayList<CategoryModel> list = new ArrayList<>();
     private CategoryAdapter adapter;
@@ -50,7 +53,8 @@ public class MainActivity extends AppCompatActivity/* implements SearchView.OnQu
 
         callFirstFrament();
         //callApi();
-
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
     }
 
     private void initWidgit() {
@@ -186,4 +190,35 @@ public class MainActivity extends AppCompatActivity/* implements SearchView.OnQu
         web.setReqType("get");
         web.execute(WebServices.GETCATEGORY);
     }
+
+    @SuppressWarnings("StatementWithEmptyBody")
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        // Handle navigation view item clicks here.
+        int id = item.getItemId();
+
+        if (id == R.id.nav_aboutus) {
+            startActivity(new Intent(MainActivity.this, AboutContact.class).putExtra("from","about"));
+        } else if (id == R.id.nav_contact) {
+            startActivity(new Intent(MainActivity.this, AboutContact.class).putExtra("from","contact"));
+        } else if (id == R.id.nav_rateapp) {
+
+            String url = "http://rkcyber.in/apps.html";
+            Intent i = new Intent(Intent.ACTION_VIEW);
+            i.setData(Uri.parse(url));
+            startActivity(i);
+
+        } else if (id == R.id.nav_share) {
+
+            String url = "https://play.google.com/store/apps/details?id=apextechies.gkquiz_hm&hl=en";
+            Intent i = new Intent(Intent.ACTION_VIEW);
+            i.setData(Uri.parse(url));
+            startActivity(i);
+        }
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
+    }
+
   }

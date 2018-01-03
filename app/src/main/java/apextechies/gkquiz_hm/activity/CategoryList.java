@@ -31,6 +31,7 @@ import apextechies.gkquiz_hm.model.QuesAnsModel;
 import apextechies.gkquiz_hm.model.SubCatListModel;
 import apextechies.gkquiz_hm.model.SubCategoryModel;
 import apextechies.gkquiz_hm.utilz.Download_web;
+import apextechies.gkquiz_hm.utilz.Utility;
 import apextechies.gkquiz_hm.utilz.WebServices;
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
@@ -62,8 +63,11 @@ public class CategoryList extends AppCompatActivity {
                 .build()
         );
         initWidgit();
-        //  if (Utility.isNetworkAvailable(CategoryList.this))
-        callCatApi();
+        if (Utility.isNetworkAvailable(CategoryList.this)) {
+            callCatApi();
+        } else {
+            Toast.makeText(CategoryList.this, "" + getResources().getString(R.string.nointernet), Toast.LENGTH_SHORT).show();
+        }
     }
 
     @Override
@@ -72,11 +76,13 @@ public class CategoryList extends AppCompatActivity {
     }
 
     private void callCatApi() {
+        Utility.showDailog(CategoryList.this, getResources().getString(R.string.pleasewait));
         ArrayList<NameValuePair> nameValuePairs = new ArrayList<>();
         Download_web web = new Download_web(CategoryList.this, new OnTaskCompleted() {
             @Override
             public void onTaskCompleted(String response) {
 
+                Utility.closeDialog();
                 if (response.length() > 0) {
                     try {
                         JSONObject object = new JSONObject(response);
@@ -89,14 +95,11 @@ public class CategoryList extends AppCompatActivity {
                             CateoryListAdapter adapter = new CateoryListAdapter(CategoryList.this, list, new ClickPosition() {
                                 @Override
                                 public void pos(int position) {
-                                    if (subCategoryModel.getData().get(position).getAuesand().size()>0)
-                                    {
+                                    if (subCategoryModel.getData().get(position).getAuesand().size() > 0) {
                                         qnlist = subCategoryModel.getData().get(position).getAuesand();
-                                        startActivity(new Intent(CategoryList.this, QuesAnsActivity.class).putParcelableArrayListExtra("list",qnlist).
-                                      putExtra("name",list.get(position).getSubCatNme())  );
-                                    }
-                                    else
-                                    {
+                                        startActivity(new Intent(CategoryList.this, QuesAnsActivity.class).putParcelableArrayListExtra("list", qnlist).
+                                                putExtra("name", list.get(position).getSubCatNme()));
+                                    } else {
                                         Toast.makeText(CategoryList.this, "No Questions found", Toast.LENGTH_SHORT).show();
                                     }
 

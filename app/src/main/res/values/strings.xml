@@ -16,7 +16,51 @@
     <string name="toast_check_connection">Check Internet Connection</string>
     <string name="no_ques_avail">No queston available</string>
     <string name="new_questions">New Questions</string>
-    <string name="questions">Questiond</string>
+    <string name="questions">Question</string>
     <string name="results">Result</string>
     <string name="SciQuiz3">SciQuiz3</string>
+
+
+    <string name="text_contactus">Contact Us:</string>
+    <string name="text_email_id">Email ID: rameshkhachi@gmail.com</string>
+    <string name="text_mobile">Mobile No. 09805138387</string>
+    <string name="text_weblink">http://rkcyber.in/contact.html</string>
+    <string name="text_address">Ramesh Khachi
+Jawahar Navodaya Vidyalaya
+Rekong Peo, District Kinnaur
+Himachal Pradesh, PIN 172107</string>
+    <string name="text_about_first">(World Record Holder in Guinness Book of Records-1994)</string>
+    <string name="text_about_second">Broke an existing World Record in Static Wall Sit (Modified UTKAT ASAN) in September 1992.
+
+His World Record for this Yoga Asan was entered in the Guinness Book of Records (UK)-1994 at page no. 268 under the Chapter “Gymnastics”.
+
+The achievement was also entered in the Limca Book of Records (India)-1994.</string>
+    <string name="text_about_third">Represented India in International Keyboarding Competition (Text Production by PC)-2006 organized by Intersteno, Belgium in May 2006.</string>
+    <string name="text_about_fourth">The First National Arbiter in Chess from Himachal Pradesh (India).</string>
+    <string name="text_about_fifth">1 Their Ideas to Improve Life Faster (English) \n
+2 The Superlatives of Himachal Pradesh (English) \n
+3 Himachal Pradesh: Aaj Tak \n
+
+4 Himachal Pradesh Year Book (English) \n
+
+5 Himachal Pradesh Samanya Gyan (Hindi) \n
+
+6 Jawahar Navodaya Vidyalaya Selection Test (Hindi &amp; English) \n
+
+7 The Khachi Book of Educational &amp; Inspirational Thoughts (English) \n</string>
+    <string name="text_about_sixth">1  Chess News \n
+2 News of JNVs \n
+3 Sangri Darpan \n
+4 News of Kendriya Vidyalayas \n
+5 Chess News \n
+6 Aaj Ki Dak</string>
+    <string name="website_link">[   Website: http://rkcyber.in/  ]</string>
+    <string name="text_worldrecord">World Records:</string>
+    <string name="text_international">International Participation:</string>
+    <string name="text_inational">INational Arbiter in Chess-2005</string>
+    <string name="bookspublis">Books Published:</string>
+    <string name="apps">Apps Published</string>
+    <string name="nointernet">No Internet Connection</string>
+
+
 </resources>
