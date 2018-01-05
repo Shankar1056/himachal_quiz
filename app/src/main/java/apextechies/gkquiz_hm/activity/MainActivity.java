@@ -14,6 +14,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
@@ -146,6 +147,27 @@ public class MainActivity extends AppCompatActivity/* implements SearchView.OnQu
         filter(newText);
         return false;
     }*/
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+
+        getMenuInflater().inflate(R.menu.main, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+
+        switch(item.getItemId()){
+            case R.id.menu_item:
+                callFirstFrament();
+                return true;
+
+
+            default: return super.onOptionsItemSelected(item);
+        }
+    }
+
     private void callApi() {
         Utility.showDailog(MainActivity.this, getResources().getString(R.string.pleasewait));
         Download_web web = new Download_web(MainActivity.this, new OnTaskCompleted() {

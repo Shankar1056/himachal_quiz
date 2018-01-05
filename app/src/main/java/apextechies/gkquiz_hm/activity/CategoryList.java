@@ -9,6 +9,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -145,5 +147,29 @@ public class CategoryList extends AppCompatActivity {
                 finish();
             }
         });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+
+        getMenuInflater().inflate(R.menu.main, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+
+        switch(item.getItemId()){
+            case R.id.menu_item:
+                if (Utility.isNetworkAvailable(CategoryList.this)) {
+                    callCatApi();
+                } else {
+                    Toast.makeText(CategoryList.this, "" + getResources().getString(R.string.nointernet), Toast.LENGTH_SHORT).show();
+                }
+                return true;
+
+
+            default: return super.onOptionsItemSelected(item);
+        }
     }
 }
