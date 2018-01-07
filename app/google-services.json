@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "251879802803",
+    "firebase_url": "https://himachal-quiz.firebaseio.com",
+    "project_id": "himachal-quiz",
+    "storage_bucket": "himachal-quiz.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:251879802803:android:0772320296f781fd",
+        "android_client_info": {
+          "package_name": "apextechies.gkquiz_hm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "251879802803-2ehl94n4aur2sutjop4g0u6p42qfvb8j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAldyg6AgD2Qz5YXFMvXGJN2ZfJDzl2yks"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

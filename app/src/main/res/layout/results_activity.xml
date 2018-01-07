@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <include
-        layout="@layout/toolbar" />
+
+    <include layout="@layout/toolbar" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -14,340 +16,357 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:layout_weight=".6">
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" >
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageView3"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:id="@+id/imageView4"
-            android:background="@mipmap/tick"
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView3"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true" />
 
-            android:layout_above="@+id/score"
-            android:layout_centerHorizontal="true" />
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/imageView4"
+                    android:background="@mipmap/tick"
 
-       <!-- <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="New Text"
-            android:id="@+id/textView4"
-            android:layout_centerVertical="true"
-            android:layout_alignLeft="@+id/imageView4"
-            android:layout_alignStart="@+id/imageView4"
-            />-->
-        <TextView
-            android:id="@+id/score"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:text="5 / 10"
-            android:textSize="18dp"
-            android:textStyle="bold"
-            android:gravity="bottom"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true" />
+                    android:layout_above="@+id/score"
+                    android:layout_centerHorizontal="true" />
 
-    </RelativeLayout>
-            </LinearLayout>
+                <!-- <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="New Text"
+                     android:id="@+id/textView4"
+                     android:layout_centerVertical="true"
+                     android:layout_alignLeft="@+id/imageView4"
+                     android:layout_alignStart="@+id/imageView4"
+                     />-->
+                <TextView
+                    android:id="@+id/score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="5 / 10"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:gravity="bottom"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight=".4"
             android:orientation="vertical">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@color/colorPrimary"
 
-      >
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_weight=".3"
-
-        android:paddingLeft="3dp"
-
-        >
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_weight=".4"
-            android:gravity="center"
-            >
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="match_parent"
-                android:src="@mipmap/tick"
-
-              android:layout_gravity="center"
-                />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:layout_weight=".5"
-            android:gravity="center"
-            >
-            <TextView
-                android:id="@+id/no_of_correct"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="05"
-                android:gravity="left"
-                android:textSize="18dp"
-                android:textColor="@color/white"/>
+                android:orientation="horizontal"
+                android:background="@color/colorPrimary"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_weight=".3"
+
+                    android:paddingLeft="3dp"
+
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight=".4"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/tick"
+
+                            android:layout_gravity="center" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_weight=".5"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/no_of_correct"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="05"
+                            android:gravity="left"
+                            android:textSize="18dp"
+                            android:textColor="@color/white" />
 
 
+                    </LinearLayout>
 
-</LinearLayout>
-        <View
-            android:layout_width="0.5dp"
-            android:layout_height="match_parent"
-            android:background="@color/white"
-            android:layout_marginTop="9dp"
-            android:layout_marginBottom="9dp"/>
-        </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:layout_weight=".3"
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:layout_marginTop="9dp"
+                        android:layout_marginBottom="9dp" />
+                </LinearLayout>
 
-        android:paddingLeft="3dp"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight=".3"
 
-        >
+                    android:paddingLeft="3dp"
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:layout_weight=".3"
-            android:gravity="center"
-            >
-            <ImageView
-                android:layout_width="30dp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_weight=".3"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/cross"
+
+                            android:gravity="center" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_weight=".5"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/no_of_wrong"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="05"
+                            android:gravity="left"
+                            android:textSize="18dp"
+                            android:textColor="@color/white" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginBottom="9dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight=".3"
+
+                    android:paddingLeft="3dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight=".3"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/warning"
+
+                            android:layout_gravity="center" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_weight=".5"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/not_answered"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="05"
+                            android:gravity="left"
+                            android:textSize="18dp"
+                            android:textColor="@color/white" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@mipmap/cross"
+                android:orientation="vertical"
+                android:layout_weight=".3"
+                android:visibility="invisible">
 
-                android:gravity="center"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight=".33"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="total_candidates"
+                        android:layout_weight=".3"
+                        android:gravity="right"
+                        android:textSize="20dp"
+
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" 21"
+                        android:id="@+id/total_candidates"
+                        android:layout_weight=".5"
+                        android:textSize="20dp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray"
+
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight=".33"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="best_score"
+                        android:layout_weight=".3"
+                        android:gravity="right"
+                        android:textSize="20dp"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/best_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" 10/10"
+
+                        android:layout_weight=".5"
+                        android:textSize="20dp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray"
+
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight=".33"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="your_rank"
+                        android:layout_weight=".3"
+                        android:gravity="right"
+                        android:textSize="20dp"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/rank"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" 8"
+
+                        android:layout_weight=".5"
+                        android:textSize="20dp" />
+
+                </LinearLayout>
 
             </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:layout_weight=".5"
-            android:gravity="center"
-            >
-        <TextView
-            android:id="@+id/no_of_wrong"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="05"
-            android:gravity="left"
-            android:textSize="18dp"
-            android:textColor="@color/white"/>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="@color/colorPrimary"
+                android:layout_weight=".7"
 
+                >
+
+                <TextView
+                    android:id="@+id/tryAgain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Try again"
+                    android:layout_weight=".3"
+                    android:gravity="center_vertical"
+                    android:textSize="20dp"
+                    android:textColor="@color/white"
+                    android:textAllCaps="true"
+                    android:layout_marginLeft="5dp"
+
+                    />
+
+                <TextView
+                    android:id="@+id/home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Home"
+                    android:textColor="@color/white"
+                    android:layout_weight=".5"
+                    android:textSize="20dp"
+                    android:gravity="center|right"
+                    android:textAllCaps="true"
+                    android:layout_marginRight="5dp" />
             </LinearLayout>
-    </LinearLayout>
-        <View
-            android:layout_width="0.5dp"
-            android:layout_height="match_parent"
-            android:background="@color/white"
-            android:layout_marginTop="9dp"
-            android:layout_marginBottom="9dp"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:layout_weight=".3"
-
-        android:paddingLeft="3dp"
-        >
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_weight=".3"
-            android:gravity="center"
-            >
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="match_parent"
-            android:src="@mipmap/warning"
-
-            android:layout_gravity="center"/>
-</LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:layout_weight=".5"
-            android:gravity="center"
-            >
-            <TextView
-            android:id="@+id/not_answered"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="05"
-            android:gravity="left"
-            android:textSize="18dp"
-            android:textColor="@color/white"/>
-
-
-            </LinearLayout>
-    </LinearLayout>
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_weight=".3"
-        android:visibility="invisible">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:layout_weight=".33"
-            android:gravity="center"
-            >
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="total_candidates"
-                android:layout_weight=".3"
-                android:gravity="right"
-                android:textSize="20dp"
-
-               />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=" 21"
-                android:id="@+id/total_candidates"
-                android:layout_weight=".5"
-                android:textSize="20dp"/>
 
         </LinearLayout>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/gray"
-
-            />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-           android:layout_weight=".33"
-            android:gravity="center"
-            >
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="best_score"
-                android:layout_weight=".3"
-                android:gravity="right"
-                android:textSize="20dp"
-
-                />
-            <TextView
-                android:id="@+id/best_score"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=" 10/10"
-
-                android:layout_weight=".5"
-                android:textSize="20dp"/>
-
-        </LinearLayout>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/gray"
-
-            />
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:layout_weight=".33"
-            android:gravity="center"
-            >
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="your_rank"
-                android:layout_weight=".3"
-                android:gravity="right"
-                android:textSize="20dp"
-
-                />
-            <TextView
-                android:id="@+id/rank"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=" 8"
-
-                android:layout_weight=".5"
-                android:textSize="20dp"/>
-
-        </LinearLayout>
-
-        </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:background="@color/colorPrimary"
-        android:layout_weight=".7"
-
-        >
-
-        <TextView
-            android:id="@+id/tryAgain"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="Try again"
-            android:layout_weight=".3"
-            android:gravity="center_vertical"
-            android:textSize="20dp"
-            android:textColor="@color/white"
-
-            android:layout_marginLeft="5dp"
-
-            />
-        <TextView
-            android:id="@+id/home"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="Home"
-            android:textColor="@color/white"
-            android:layout_weight=".5"
-            android:textSize="20dp"
-            android:gravity="center|right"
-            android:layout_marginRight="5dp"
-           /></LinearLayout>
-
-    </LinearLayout>
     </LinearLayout>
 </LinearLayout>

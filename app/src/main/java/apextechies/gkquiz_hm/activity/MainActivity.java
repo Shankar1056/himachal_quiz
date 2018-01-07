@@ -11,7 +11,7 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity/* implements SearchView.OnQu
         toggle.syncState();
 
         rv_category = (RecyclerView) findViewById(R.id.rv_category);
-        rv_category.setLayoutManager(new GridLayoutManager(MainActivity.this, 3));
+        rv_category.setLayoutManager(new LinearLayoutManager(MainActivity.this));
 
        /* InputFilter[] editFilters = searchField.getFilters();
         InputFilter[] newFilters = new InputFilter[editFilters.length + 1];
@@ -225,17 +225,26 @@ public class MainActivity extends AppCompatActivity/* implements SearchView.OnQu
             startActivity(new Intent(MainActivity.this, AboutContact.class).putExtra("from","contact"));
         } else if (id == R.id.nav_rateapp) {
 
-            String url = "http://rkcyber.in/apps.html";
+            String url = "https://play.google.com/store/apps/details?id=apextechies.gkquiz_hm&hl=en";
             Intent i = new Intent(Intent.ACTION_VIEW);
             i.setData(Uri.parse(url));
             startActivity(i);
 
         } else if (id == R.id.nav_share) {
+            String shareBody = "https://play.google.com/store/apps/details?id=apextechies.gkquiz_hm&hl=en";
+            Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+            sharingIntent.setType("text/plain");
+            sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Karma");
+            sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
+            startActivity(Intent.createChooser(sharingIntent, getResources().getString(R.string.share_using)));
 
-            String url = "https://play.google.com/store/apps/details?id=apextechies.gkquiz_hm&hl=en";
+        }
+        else if (id == R.id.nav_more) {
+            String url = "https://play.google.com/store/apps/details?id=Ramesh+Khachi";
             Intent i = new Intent(Intent.ACTION_VIEW);
             i.setData(Uri.parse(url));
             startActivity(i);
+
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

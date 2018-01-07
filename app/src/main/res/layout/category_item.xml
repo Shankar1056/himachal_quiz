@@ -15,29 +15,31 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:gravity="center"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
             android:layout_marginRight="@dimen/text_5">
            <!-- <ImageView
                 android:id="@+id/cat_image"
                 android:layout_width="@dimen/dimen_50"
                 android:layout_height="@dimen/dimen_50"
                 android:background="@mipmap/ic_launcher_round"/>-->
+
             <de.hdodenhof.circleimageview.CircleImageView
                 xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/cat_image"
                 android:layout_width="@dimen/dimen_50"
                 android:layout_height="@dimen/dimen_50"
                 app:civ_border_width="0dp"
+                android:layout_marginLeft="@dimen/text_10"
                 app:civ_border_color="#FF000000"/>
             <TextView
                 android:id="@+id/cat_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/text_10"
                 android:paddingRight="@dimen/text_5"
                 android:paddingLeft="@dimen/text_5"
                 android:text="f eskfj"
+                android:layout_marginLeft="@dimen/text_10"
                 fontPath="@string/regular_font"
                 tools:ignore="MissingPrefix"
                 android:singleLine="true"

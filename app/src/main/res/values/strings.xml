@@ -19,16 +19,17 @@
     <string name="questions">Question</string>
     <string name="results">Result</string>
     <string name="SciQuiz3">SciQuiz3</string>
+    <string name="pleaseWait">Please Wait</string>
 
 
     <string name="text_contactus">Contact Us:</string>
     <string name="text_email_id">Email ID: rameshkhachi@gmail.com</string>
     <string name="text_mobile">Mobile No. 09805138387</string>
     <string name="text_weblink">http://rkcyber.in/contact.html</string>
-    <string name="text_address">Ramesh Khachi
-Jawahar Navodaya Vidyalaya
-Rekong Peo, District Kinnaur
-Himachal Pradesh, PIN 172107</string>
+    <string name="text_address">Ramesh Khachi \n
+Jawahar Navodaya Vidyalaya \n
+Rekong Peo, District Kinnaur \n
+        Himachal Pradesh, PIN 172107</string>
     <string name="text_about_first">(World Record Holder in Guinness Book of Records-1994)</string>
     <string name="text_about_second">Broke an existing World Record in Static Wall Sit (Modified UTKAT ASAN) in September 1992.
 
@@ -57,10 +58,14 @@ The achievement was also entered in the Limca Book of Records (India)-1994.</str
     <string name="website_link">[   Website: http://rkcyber.in/  ]</string>
     <string name="text_worldrecord">World Records:</string>
     <string name="text_international">International Participation:</string>
-    <string name="text_inational">INational Arbiter in Chess-2005</string>
+    <string name="text_inational">National Arbiter in Chess-2005</string>
     <string name="bookspublis">Books Published:</string>
     <string name="apps">Apps Published</string>
     <string name="nointernet">No Internet Connection</string>
+    <string name="share_using">Share Using</string>
+    <string name="hint_email">Enter your email id</string>
+    <string name="hint_name">Enter your name</string>
+    <string name="hint_mobile">Enter mobile number</string>
 
 
 </resources>

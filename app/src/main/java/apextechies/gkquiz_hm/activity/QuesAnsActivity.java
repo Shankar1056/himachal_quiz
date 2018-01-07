@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -31,14 +32,15 @@ public class QuesAnsActivity extends AppCompatActivity {
     private ArrayList<QuesAnsModel> queList = new ArrayList<>();
     ;
     private int queListCount = 0;
-    TextView question = null;
-    TextView answer1, answer2, answer3, answer4;
-    LinearLayout optionsLayout;
-    TextView finish = null, opt1, opt2, opt3, opt4;
-    TextView quesCount;
-    int quesIndex = 0;
-    int selected[];
-    int correctAns[] = null;
+    private TextView question = null;
+    private TextView answer1, answer2, answer3, answer4;
+    private LinearLayout optionsLayout;
+    private TextView finish = null, opt1, opt2, opt3, opt4;
+    private TextView quesCount;
+    private ImageView share;
+    private int quesIndex = 0;
+    private int selected[];
+    private int correctAns[] = null;
     boolean review = false;
     Button prev, next = null;
 
@@ -80,6 +82,7 @@ public class QuesAnsActivity extends AppCompatActivity {
         opt2 = (TextView) findViewById(R.id.opt2);
         opt3 = (TextView) findViewById(R.id.opt3);
         opt4 = (TextView) findViewById(R.id.opt4);
+        share = (ImageView)findViewById(R.id.share);
 
         queList = getIntent().getParcelableArrayListExtra("list");
         Log.i("queList", queList.toString());
@@ -95,6 +98,30 @@ public class QuesAnsActivity extends AppCompatActivity {
         findViewById(R.id.option3).setOnClickListener(option3);
         findViewById(R.id.option4).setOnClickListener(option4);
         finish.setOnClickListener(finishListener);
+
+
+        share.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String alldata =((queList.get(i).getQuestion()).replace("\\n", "\n").replace("span style=\"color:", "font color=").replace("span style=\"background-color:", "font color=").replace("\"","").replace("<p>","").replace("</p>","\n").replace("</span>", "</font>"));
+                String ans1 = (queList.get(i).getOptionFirst()).replace("\\n", "\n").replace("span style=\"color:", "font color=").replace("span style=\"background-color:", "font color=").replace("\"","").replace("<p>","").replace("</p>","\n").replace("</span>", "</font>");
+                String ans2 = (queList.get(i).getOptionSecond()).replace("\\n", "\n").replace("span style=\"color:", "font color=").replace("span style=\"background-color:", "font color=").replace("\"","").replace("<p>","").replace("</p>","\n").replace("</span>", "</font>");
+                String ans3 = (queList.get(i).getOptionThird()).replace("\\n", "\n").replace("span style=\"color:", "font color=").replace("span style=\"background-color:", "font color=").replace("\"","").replace("<p>","").replace("</p>","\n").replace("</span>", "</font>");
+                String ans4 = (queList.get(i).getOptionFourth()).replace("\\n", "\n").replace("span style=\"color:", "font color=").replace("span style=\"background-color:", "font color=").replace("\"","").replace("<p>","").replace("</p>","\n").replace("</span>", "</font>");
+
+                allqodata= ( Html.fromHtml(alldata) +"\n \n"+Html.fromHtml(ans1)+"\n \n"+Html.fromHtml(ans2)+"\n \n"+Html.fromHtml(ans3)+"\n \n"+Html.fromHtml(ans4)+"\n \n"+
+                        " Install 'Himachal Quiz' app from google play store or click on this link"+"\n"+"https://play.google.com/store/apps/details?id=apextechies.gkquiz_hm&hl=en");
+
+
+                Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+                sharingIntent.setType("text/plain");
+                sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "IAS UCC");
+                sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, allqodata);
+                startActivity(Intent.createChooser(sharingIntent, "Share via"));
+
+            }
+        });
+
     }
 
     private void initToolbar() {

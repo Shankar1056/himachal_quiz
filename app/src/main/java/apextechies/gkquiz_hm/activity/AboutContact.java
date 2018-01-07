@@ -46,7 +46,7 @@ public class AboutContact extends AppCompatActivity {
             setContentView(R.layout.contact_us);
             initWidgit("Contact Us");
             settingEmailSpannable();
-            settingMobileSpannable();
+            //settingMobileSpannable();
             settingLinkSpannable();
         }
         if (Build.VERSION.SDK_INT >= 21) {
