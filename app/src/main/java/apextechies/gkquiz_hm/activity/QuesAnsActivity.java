@@ -176,14 +176,20 @@ public class QuesAnsActivity extends AppCompatActivity {
 
             }
             String alldata = ((queList.get(i).getQuestion()).replace("\\n", "\n").replace("span style=\"color:", "font color=").replace("<br />\r\n", "").replace("span style=\"background-color:", "font color=").replace("\"", "").replace("<p>", "").replace("</p>", "\n").replace("</span>", "</font>"));
-            question.setText(Html.fromHtml(alldata));
+            /*question.setText(Html.fromHtml(alldata));
             answer1.setText(Html.fromHtml((queList.get(i).getOptionFirst()).replace("\\n", "\n").replace("span style=\"color:", "font color=").replace("span style=\"background-color:", "font color=").replace("\"", "").replace("<p>", "").replace("</p>", "\n").replace("</span>", "</font>")));
             answer2.setText(Html.fromHtml((queList.get(i).getOptionSecond()).replace("\\n", "\n").replace("span style=\"color:", "font color=").replace("span style=\"background-color:", "font color=").replace("\"", "").replace("<p>", "").replace("</p>", "\n").replace("</span>", "</font>")));
             answer3.setText(Html.fromHtml((queList.get(i).getOptionThird()).replace("\\n", "\n").replace("span style=\"color:", "font color=").replace("span style=\"background-color:", "font color=").replace("\"", "").replace("<p>", "").replace("</p>", "\n").replace("</span>", "</font>")));
             answer4.setText(Html.fromHtml((queList.get(i).getOptionFourth()).replace("\\n", "\n").replace("span style=\"color:", "font color=").replace("span style=\"background-color:", "font color=").replace("\"", "").replace("<p>", "").replace("</p>", "\n").replace("</span>", "</font>")));
             allqodata = (question.getText().toString() + "\n" + answer1.getText().toString() + "\n" + answer2.getText().toString() + "\n" + answer3.getText().toString() + "\n" + answer4.getText().toString() + "\n \n" +
                     " Install 'IAS UCC' app from google play store or click on this link" + "\n" + "https://play.google.com/store/apps/details?id=com.ucc.application&hl=en");
+*/
 
+            question.setText(queList.get(i).getQuestion());
+            answer1.setText(queList.get(i).getOptionFirst());
+            answer2.setText(queList.get(i).getOptionSecond());
+            answer3.setText(queList.get(i).getOptionThird());
+            answer4.setText(queList.get(i).getOptionFourth());
 
             setScoreTitle();
             if ((quesIndex + 1) == (queListCount)) {

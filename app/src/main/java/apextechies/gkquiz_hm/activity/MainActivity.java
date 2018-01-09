@@ -240,7 +240,7 @@ public class MainActivity extends AppCompatActivity/* implements SearchView.OnQu
 
         }
         else if (id == R.id.nav_more) {
-            String url = "https://play.google.com/store/apps/details?id=Ramesh+Khachi";
+            String url = "https://play.google.com/store/apps/developer?id=Ramesh+Khachi";
             Intent i = new Intent(Intent.ACTION_VIEW);
             i.setData(Uri.parse(url));
             startActivity(i);

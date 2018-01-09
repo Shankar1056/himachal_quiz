@@ -8,8 +8,7 @@
     <android.support.v7.widget.CardView
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="120dp"
-        card_view:cardElevation="3dp"
+        android:layout_height="80dp"
         card_view:cardCornerRadius="4dp"
         card_view:cardUseCompatPadding="true">
         <LinearLayout
@@ -34,17 +33,18 @@
                 app:civ_border_color="#FF000000"/>
             <TextView
                 android:id="@+id/cat_text"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingRight="@dimen/text_5"
                 android:paddingLeft="@dimen/text_5"
-                android:text="f eskfj"
-                android:layout_marginLeft="@dimen/text_10"
+                android:textAllCaps="true"
+                android:layout_marginLeft="@dimen/text_15"
                 fontPath="@string/regular_font"
                 tools:ignore="MissingPrefix"
                 android:singleLine="true"
                 android:ellipsize="end"
-                android:textSize="@dimen/text_12"/>
+                android:gravity="center_vertical"
+                android:textSize="@dimen/text_15"/>
         </LinearLayout>
     </android.support.v7.widget.CardView>
 

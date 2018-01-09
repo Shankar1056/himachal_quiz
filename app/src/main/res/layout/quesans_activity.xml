@@ -87,11 +87,9 @@
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
                     android:paddingBottom="10dp"
-                    android:autoLink="all"
-                    android:textSize="15sp"
+                    android:textSize="18sp"
                     android:layout_below="@+id/share"
-                    android:text="rbedbitomu43diom4ui"
-                    android:layout_marginBottom="@dimen/text_10">
+                    android:text="rbedbitomu43diom4ui">
                 </TextView>
         </RelativeLayout>
 
@@ -128,9 +126,8 @@
                                 android:id="@+id/answer1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:autoLink="all"
                                 android:layout_marginLeft="20dp"
-                                android:textSize="14sp"
+                                android:textSize="18sp"
                                 android:gravity="center_vertical"
 
                                 />
@@ -159,9 +156,8 @@
                                 android:id="@+id/answer2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:autoLink="all"
                                 android:layout_marginLeft="20dp"
-                                android:textSize="14sp"
+                                android:textSize="18sp"
                                 android:gravity="center_vertical"
                                 />
                         </LinearLayout>
@@ -191,9 +187,8 @@
                                 android:id="@+id/answer3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:autoLink="all"
                                 android:layout_marginLeft="20dp"
-                                android:textSize="14sp"
+                                android:textSize="18sp"
                                 android:gravity="center_vertical"
                                 />
                         </LinearLayout>
@@ -224,8 +219,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="20dp"
-                                android:autoLink="all"
-                                android:textSize="14sp"
+                                android:textSize="18sp"
                                 android:gravity="center_vertical"
                                 />
                         </LinearLayout>

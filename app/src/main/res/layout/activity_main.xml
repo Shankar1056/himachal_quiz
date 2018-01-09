@@ -33,6 +33,7 @@
                 android:id="@+id/footer_item_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:visibility="gone"
                 android:background="@mipmap/apex_logo"/>
         </LinearLayout>
     </android.support.design.widget.NavigationView>

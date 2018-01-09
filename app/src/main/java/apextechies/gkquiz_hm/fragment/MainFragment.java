@@ -3,7 +3,7 @@ package apextechies.gkquiz_hm.fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -102,6 +102,6 @@ public class MainFragment extends android.app.Fragment {
 
     private void initWidgit(View view) {
         rv_category = (RecyclerView) view.findViewById(R.id.rv_category);
-        rv_category.setLayoutManager(new GridLayoutManager(getActivity(), 3));
+        rv_category.setLayoutManager(new LinearLayoutManager(getActivity()));
     }
 }

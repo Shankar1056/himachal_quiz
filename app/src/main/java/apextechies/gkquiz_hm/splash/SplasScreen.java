@@ -20,12 +20,18 @@ import com.google.firebase.auth.FirebaseUser;
 
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.Collections;
 
 import apextechies.gkquiz_hm.R;
+import apextechies.gkquiz_hm.activity.MainActivity;
+import apextechies.gkquiz_hm.common.ClsGeneral;
 import apextechies.gkquiz_hm.interfaces.OnTaskCompleted;
+import apextechies.gkquiz_hm.login.SignUp;
 import apextechies.gkquiz_hm.utilz.Download_web;
 import apextechies.gkquiz_hm.utilz.Utility;
 import apextechies.gkquiz_hm.utilz.WebServices;
@@ -43,30 +49,43 @@ public class SplasScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         Fabric.with(this, new Crashlytics());
         setContentView(R.layout.splas_activity);
-       /* Thread lTimer = new Thread() {
 
-            public void run() {
+        if (ClsGeneral.getPreferences(SplasScreen.this, "id").equalsIgnoreCase(""))
+        {
+            checkSession();
+        }
+       else if (ClsGeneral.getPreferences(SplasScreen.this, "userEmail").equalsIgnoreCase(""))
+        {
+            startActivity(new Intent(SplasScreen.this, SignUp.class));
+            finish();
+        }
+        else
+        {
+            Thread lTimer = new Thread() {
 
-                try {
-                    int lTimer1 = 0;
-                    while (lTimer1 < 3000) {
-                        sleep(100);
-                        lTimer1 = lTimer1 + 100;
+                public void run() {
+
+                    try {
+                        int lTimer1 = 0;
+                        while (lTimer1 < 3000) {
+                            sleep(100);
+                            lTimer1 = lTimer1 + 100;
+                        }
+                        startActivity(new Intent(SplasScreen.this, MainActivity.class));
+                        finish();
+                    } catch (InterruptedException e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
                     }
-                    startActivity(new Intent(SplasScreen.this, MainActivity.class));
-                    finish();
-                } catch (InterruptedException e) {
-                    // TODO Auto-generated catch block
-                    e.printStackTrace();
-                }
 
-                finally {
-                    finish();
+                    finally {
+                        finish();
+                    }
                 }
-            }
-        };
-        lTimer.start();*/
-        checkSession();
+            };
+            lTimer.start();
+        }
+
 
     }
 
@@ -140,7 +159,30 @@ public class SplasScreen extends AppCompatActivity {
                 Utility.closeDialog();
                 if (response.length()>0)
                 {
-
+                    try {
+                        JSONObject object = new JSONObject(response);
+                        if (object.optString("status").equalsIgnoreCase("true"))
+                        {
+                            JSONArray array = object.getJSONArray("data");
+                            JSONObject jo = array.getJSONObject(0);
+                            ClsGeneral.setPreferences(SplasScreen.this, "id", jo.optString("user_id"));
+                            ClsGeneral.setPreferences(SplasScreen.this, "userName", jo.optString("userName"));
+                            ClsGeneral.setPreferences(SplasScreen.this, "userEmail", jo.optString("userEmail"));
+                            ClsGeneral.setPreferences(SplasScreen.this, "userMobile", jo.optString("userMobile"));
+                            if (ClsGeneral.getPreferences(SplasScreen.this, "userEmail").equalsIgnoreCase(""))
+                            {
+                                startActivity(new Intent(SplasScreen.this, SignUp.class));
+                                finish();
+                            }
+                            else
+                            {
+                                startActivity(new Intent(SplasScreen.this, MainActivity.class));
+                                finish();
+                            }
+                        }
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
                 }
 
             }
